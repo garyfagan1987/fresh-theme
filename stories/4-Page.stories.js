@@ -14,6 +14,7 @@ import Link from '../src/components/link';
 import List from '../src/components/list';
 import Navigation from '../src/components/molecules/navigation';
 import Margin from '../src/components/margin';
+import Promotion from '../src/components/molecules/promotion';
 import Section from '../src/components/section';
 import Text from '../src/components/text';
 import Title from '../src/components/molecules/title';
@@ -52,7 +53,14 @@ const RightContent = () => (
       <SecondaryButton theme="transparent">Learn More</SecondaryButton>
     </Buttons>
   </>
-)
+);
+
+const PromotionButton = () => (
+  <PrimaryButton>
+    <FontAwesomeIcon icon={faDownload} />
+    &nbsp;&nbsp;Download
+  </PrimaryButton>
+);
 
 export const page = () => (
   <main>
@@ -111,21 +119,7 @@ export const page = () => (
         </Row>
       </Container>
     </Section>
-    <Section theme="secondary">
-      <Container>
-        <Row>
-          <Col sm={8}>
-            <Text color="white" margin="0" size="h2">Download and try out the Fresh Theme today!</Text>
-          </Col>
-          <Col sm={4}>
-            <PrimaryButton float="right">
-              <FontAwesomeIcon icon={faDownload} />
-              &nbsp;&nbsp;Download
-            </PrimaryButton>
-          </Col>
-        </Row>
-      </Container>
-    </Section>
+    <Promotion label="Download and try out the Fresh Theme today!" button={<PromotionButton />} />
     <Section theme="transparent">
       <Container>
         <Margin bottom="lg">
