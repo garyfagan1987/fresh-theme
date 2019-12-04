@@ -6,6 +6,7 @@ import { faFontAwesomeFlag, faReact } from '@fortawesome/free-brands-svg-icons';
 import Button from '../src/components/button';
 import Buttons from '../src/components/buttons';
 import Card from '../src/components/card';
+import ContentWithImage from '../src/components/molecules/content-with-image';
 import Flex from '../src/components/flex';
 import Image from '../src/components/image';
 import Hero from '../src/components/molecules/hero';
@@ -114,61 +115,36 @@ export const page = () => (
     <Promotion label="Download and try out the Fresh Theme today!" button={<Button icon={faDownload}>Download</Button>} />
     <Section theme="transparent">
       <Container>
-        <Margin bottom="lg">
-          <Row>
-            <Col sm={6}>
-              <Flex alignItems="flex-start" flexDirection="column" justifyContent="center" stretch>
-                <Title>Get Started With Our Software</Title>
-                <Text>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
-                <List>
-                  <li>Unlimited Video Call</li>
-                  <li>Add Favourite contact</li>
-                  <li>Camera Filter</li>
-                </List>
-                <Button>Read More</Button>
-              </Flex>
-            </Col>
-            <Col sm={6}>
-              <Image src={imageFile1} />
-            </Col>
-          </Row>
-        </Margin>
-        <Margin bottom="lg">
-          <Row>
-            <Col sm={6}>
-              <Image src={imageFile2} />
-            </Col>
-            <Col sm={6}>
-              <Flex alignItems="flex-start" flexDirection="column" justifyContent="center" stretch>
-                <Title>Engineered And Optimization</Title>
-                <Text>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
-                <List>
-                  <li>Unlimited Video Call</li>
-                  <li>Add Favourite contact</li>
-                  <li>Camera Filter</li>
-                </List>
-                <Button>Read More</Button>
-              </Flex>
-            </Col>
-          </Row>
-        </Margin>
-        <Row>
-          <Col sm={6}>
-            <Flex alignItems="flex-start" flexDirection="column" justifyContent="center" stretch>
-              <Title>Quick & Easy Process</Title>
-              <Text>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
-              <List>
-                <li>Unlimited Video Call</li>
-                <li>Add Favourite contact</li>
-                <li>Camera Filter</li>
-              </List>
-              <Button>Read More</Button>
-            </Flex>
-          </Col>
-          <Col sm={6}>
-            <Image src={imageFile3} />
-          </Col>
-        </Row>
+        <ContentWithImage image={imageFile1} imagePosition="right">
+          <Title>Get Started With Our Software</Title>
+          <Text>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
+          <List>
+            <li>Unlimited Video Call</li>
+            <li>Add Favourite contact</li>
+            <li>Camera Filter</li>
+          </List>
+          <Button>Read More</Button>
+        </ContentWithImage>
+        <ContentWithImage image={imageFile2} imagePosition="left">
+          <Title>Engineered And Optimization</Title>
+          <Text>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
+          <List>
+            <li>Unlimited Video Call</li>
+            <li>Add Favourite contact</li>
+            <li>Camera Filter</li>
+          </List>
+          <Button>Read More</Button>
+        </ContentWithImage>
+        <ContentWithImage image={imageFile3} imagePosition="right">
+          <Title>Quick & Easy Process</Title>
+          <Text>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
+          <List>
+            <li>Unlimited Video Call</li>
+            <li>Add Favourite contact</li>
+            <li>Camera Filter</li>
+          </List>
+          <Button>Read More</Button>
+        </ContentWithImage>
       </Container>
     </Section>
     <Section theme="primary">
