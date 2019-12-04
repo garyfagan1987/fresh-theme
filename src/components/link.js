@@ -17,19 +17,21 @@ const Link = styled.a`
   transition: ${props => props.animate ? 'all 250ms' : 'none'};
 
   :hover {
-    color: ${styles.primary};
+    color: ${props => styles[props.hoverColor]};
     left: ${props => props.animate ? '5px' : 'auto'};
   }
 `;
 
 Link.propTypes = {
   color: PropTypes.oneOf(Object.keys(styles)),
+  hoverColor: PropTypes.oneOf(Object.keys(styles)),
   margin: PropTypes.string,
   weight: PropTypes.oneOf(Object.keys(weights)),
 };
 
 Link.defaultProps = {
   color: 'body',
+  hoverColor: 'primary',
   size: 'h4',
   margin: '1.5rem 0',
   weight: 'regular',

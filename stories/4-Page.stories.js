@@ -6,19 +6,21 @@ import { faFontAwesomeFlag, faReact } from '@fortawesome/free-brands-svg-icons';
 
 import theme from '../src/styles/colours';
 
-import {PrimaryButton, SecondaryButton} from '../src/components/button';
 import Buttons from '../src/components/buttons';
 import Card from '../src/components/card';
-import Center from '../src/components/center';
+import Flex from '../src/components/flex';
 import Image from '../src/components/image';
-import Hero from '../src/components/hero';
+import Hero from '../src/components/molecules/hero';
 import Icon from '../src/components/icon';
 import Link from '../src/components/link';
 import List from '../src/components/list';
-import { HorizontalMenu, VerticalMenu } from '../src/components/menu';
+import Navigation from '../src/components/molecules/navigation';
 import Margin from '../src/components/margin';
 import Section from '../src/components/section';
 import Text from '../src/components/text';
+
+import { PrimaryButton, SecondaryButton } from '../src/components/button';
+import { HorizontalMenu, VerticalMenu } from '../src/components/menu';
 
 import imageFile1 from '../static/image-1.png';
 import imageFile2 from '../static/image-2.png';
@@ -35,25 +37,28 @@ export default {
   title: 'Page',
 };
 
+const navigationItems = [
+  { label: 'About', path: './' },
+  { label: 'Contact', path: './' },
+  { label: 'FAQ', path: './' },
+  { label: 'Press', path: './' }
+];
+
+const RightContent = () => (
+  <>
+    <Text as="h1" color="white" margin="0" size="h1" weight="semiBold">A beautiful suite of React components</Text>
+    <Text color="white" size="h4">Our React components are beautifully crafted to create a variety of landing pages to suit you need.</Text>
+    <Buttons>
+      <PrimaryButton>Get Started</PrimaryButton>
+      <SecondaryButton theme="transparent">Learn More</SecondaryButton>
+    </Buttons>
+  </>
+)
+
 export const page = () => (
   <main>
-    <Hero>
-      <Row>
-        <Col sm={6}>
-          <Center>
-            <Image src={imageFile4} />
-          </Center>
-        </Col>
-        <Col sm={6}>
-          <Text as="h1" color="white" margin="0" size="h1" weight="semiBold">A beautiful suite of React components</Text>
-          <Text color="white" size="h4">Our React components are beautifully crafted to create a variety of landing pages to suit you need.</Text>
-          <Buttons>
-            <PrimaryButton>Get Started</PrimaryButton>
-            <SecondaryButton theme="transparent">Learn More</SecondaryButton>
-          </Buttons>
-        </Col>
-      </Row>
-    </Hero>
+    <Navigation logo="Fresh Theme" items={navigationItems} />
+    <Hero leftContent={<Image src={imageFile4} />} rightContent={<RightContent />} />
     <Section theme="transparent">
       <Container>
         <Text align="center" color="dark" margin="0 0 1.5rem" size="h2" weight="semiBold">Whats included?</Text>
@@ -133,7 +138,7 @@ export const page = () => (
         <Margin bottom="lg">
           <Row>
             <Col sm={6}>
-              <Center>
+              <Flex alignItems="flex-start" flexDirection="column" justifyContent="center" stretch>
                 <Text color="dark" margin="0 0 1.5rem" size="h2" weight="semiBold">Get Started With Our Software</Text>
                 <Text>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
                 <List>
@@ -142,7 +147,7 @@ export const page = () => (
                   <li>Camera Filter</li>
                 </List>
                 <PrimaryButton>Read More</PrimaryButton>
-              </Center>
+              </Flex>
             </Col>
             <Col sm={6}>
               <Image src={imageFile1} />
@@ -155,7 +160,7 @@ export const page = () => (
               <Image src={imageFile2} />
             </Col>
             <Col sm={6}>
-              <Center>
+              <Flex alignItems="flex-start" flexDirection="column" justifyContent="center" stretch>
                 <Text color="dark" margin="0 0 1.5rem" size="h2" weight="semiBold">Engineered And Optimization</Text>
                 <Text>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
                 <List>
@@ -164,13 +169,13 @@ export const page = () => (
                   <li>Camera Filter</li>
                 </List>
                 <PrimaryButton>Read More</PrimaryButton>
-              </Center>
+              </Flex>
             </Col>
           </Row>
         </Margin>
         <Row>
           <Col sm={6}>
-            <Center>
+            <Flex alignItems="flex-start" flexDirection="column" justifyContent="center" stretch>
               <Text color="dark" margin="0 0 1.5rem" size="h2" weight="semiBold">Quick & Easy Process</Text>
               <Text>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
               <List>
@@ -179,7 +184,7 @@ export const page = () => (
                 <li>Camera Filter</li>
               </List>
               <PrimaryButton>Read More</PrimaryButton>
-            </Center>
+            </Flex>
           </Col>
           <Col sm={6}>
             <Image src={imageFile3} />
@@ -280,18 +285,18 @@ export const page = () => (
       <Container>
         <Row>
           <Col sm={6}>
-            <Center>
-              <Image src={imageFile5} />
-            </Center>
+            <Image src={imageFile5} />
           </Col>
           <Col sm={6}>
-            <Text color="dark" margin="0 0 1.5rem" size="h2" weight="semiBold">Build Beautiful Interface Into Your Application</Text>
-            <Text size="h4">Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
-            <List>
-              <li>Unlimited Video Call</li>
-              <li>Add Favourite contact</li>
-              <li>Camera Filter</li>
-            </List>
+            <Flex alignItems="flex-start" flexDirection="column" justifyContent="center" style={{height: '100%'}}>
+              <Text color="dark" margin="0 0 1.5rem" size="h2" weight="semiBold">Build Beautiful Interface Into Your Application</Text>
+              <Text size="h4">Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
+              <List>
+                <li>Unlimited Video Call</li>
+                <li>Add Favourite contact</li>
+                <li>Camera Filter</li>
+              </List>
+            </Flex>
           </Col>
         </Row>
       </Container>
