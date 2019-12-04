@@ -1,17 +1,15 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircle, faDownload, faGrinStars, faPaintRoller, faPuzzlePiece, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faGrinStars, faPaintRoller, faPuzzlePiece, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faFontAwesomeFlag, faReact } from '@fortawesome/free-brands-svg-icons';
-
-import theme from '../src/styles/colours';
 
 import Buttons from '../src/components/buttons';
 import Card from '../src/components/card';
 import Flex from '../src/components/flex';
 import Image from '../src/components/image';
 import Hero from '../src/components/molecules/hero';
-import Icon from '../src/components/icon';
+import IconCard from '../src/components/molecules/icon-card';
 import Link from '../src/components/link';
 import List from '../src/components/list';
 import Navigation from '../src/components/molecules/navigation';
@@ -65,55 +63,49 @@ export const page = () => (
         <Margin bottom="lg">
           <Row>
             <Col sm={4}>
-              <Icon className="fa-layers fa-fw" as="span">
-                <FontAwesomeIcon icon={faCircle} color={theme.secondary} />
-                <FontAwesomeIcon icon={faReact} inverse transform="shrink-10" />
-              </Icon>
-              <Text align="center" color="dark" size="h3" weight="semiBold">ReactJS & GatsbyJS</Text>
-              <Text align="center">Packaged with React 16.8+ and the latest version of GatsbyJS with page examples</Text>
+              <IconCard
+                description="Packaged with React 16.8+ and the latest version of GatsbyJS with page examples"
+                icon={faReact}
+                title="ReactJS & GatsbyJS"
+              />
             </Col>
             <Col sm={4}>
-              <Icon className="fa-layers fa-fw" as="span">
-                <FontAwesomeIcon icon={faCircle} color={theme.secondary} />
-                <FontAwesomeIcon icon={faPaintRoller} inverse transform="shrink-10" />
-              </Icon>
-              <Text align="center" color="dark" size="h3" weight="semiBold">Styled Components</Text>
-              <Text align="center">Use the best bits of ES6 and CSS to extend this theme without stress</Text>
+              <IconCard
+                description="Use the best bits of ES6 and CSS to extend this theme without stress"
+                icon={faPaintRoller}
+                title="Styled Components"
+              />
             </Col>
             <Col sm={4}>
-              <Icon className="fa-layers fa-fw" as="span">
-                <FontAwesomeIcon icon={faCircle} color={theme.secondary} />
-                <FontAwesomeIcon icon={faPuzzlePiece} inverse transform="shrink-10" />
-              </Icon>
-              <Text align="center" color="dark" size="h3" weight="semiBold">Customisation</Text>
-              <Text align="center">A suite of components that are fully customisable and work together</Text>
+              <IconCard
+                description="A suite of components that are fully customisable and work together"
+                icon={faPuzzlePiece}
+                title="Customisation"
+              />
             </Col>
           </Row>
         </Margin>
         <Row>
           <Col sm={4}>
-            <Icon className="fa-layers fa-fw" as="span">
-              <FontAwesomeIcon icon={faCircle} color={theme.secondary} />
-              <FontAwesomeIcon icon={faSearch} inverse transform="shrink-10" />
-            </Icon>
-            <Text align="center" color="dark" size="h3" weight="semiBold">SEO Friendly</Text>
-            <Text align="center">All components are SEO friendly so Google can find your content easily</Text>
+            <IconCard
+              description="All components are SEO friendly so Google can find your content easily"
+              icon={faSearch}
+              title="SEO Friendly"
+            />
           </Col>
           <Col sm={4}>
-            <Icon className="fa-layers fa-fw" as="span">
-              <FontAwesomeIcon icon={faCircle} color={theme.secondary} />
-              <FontAwesomeIcon icon={faGrinStars} inverse transform="shrink-10" />
-            </Icon>
-            <Text align="center" color="dark" size="h3" weight="semiBold">10 Pages</Text>
-            <Text align="center">A variety of different pages have already been pre-build to extend upon</Text>
+            <IconCard
+              description="A variety of different pages have already been pre-build to extend upon"
+              icon={faGrinStars}
+              title="10 Pages"
+            />
           </Col>
           <Col sm={4}>
-            <Icon className="fa-layers fa-fw" as="span">
-              <FontAwesomeIcon icon={faCircle} color={theme.secondary} />
-              <FontAwesomeIcon icon={faFontAwesomeFlag} inverse transform="shrink-10" />
-            </Icon>
-            <Text align="center" color="dark" size="h3" weight="semiBold">Font Awesome</Text>
-            <Text align="center">Packaged with Font Awesome for all of your iconography requirements</Text>
+            <IconCard
+              description="Packaged with Font Awesome for all of your iconography requirements"
+              icon={faFontAwesomeFlag}
+              title="Font Awesome"
+            />
           </Col>
         </Row>
       </Container>

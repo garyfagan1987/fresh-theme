@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import styled from 'styled-components';
 import { Row, Col } from 'react-grid-system';
 
@@ -41,5 +42,10 @@ const Hero = ({
     </HeroBackground>
   );
 };
+
+Hero.propTypes = {
+  leftContent: PropTypes.element.isRequired,
+  rightContent:  PropTypes.element.isRequired,
+}
 
 export default Hero;
