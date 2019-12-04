@@ -15,6 +15,7 @@ import Link from '../src/components/link';
 import List from '../src/components/list';
 import Navigation from '../src/components/molecules/navigation';
 import Margin from '../src/components/margin';
+import ProfileCard from '../src/components/molecules/profile-card';
 import Promotion from '../src/components/molecules/promotion';
 import Section from '../src/components/section';
 import Text from '../src/components/text';
@@ -153,32 +154,16 @@ export const page = () => (
         <Text align="center" size="h4">Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
         <Row>
           <Col sm={3}>
-            <Card>
-              <Image src={personImage1} />
-              <Text align="center" color="dark" size="h3" weight="semiBold">Park Tim</Text>
-              <Text align="center">CEO</Text>
-            </Card>
+            <ProfileCard description="CEO" image={personImage1} title="Park Tim" />
           </Col>
           <Col sm={3}>
-            <Card>
-              <Image src={personImage2} />
-              <Text align="center" size="h3" color="dark" weight="semiBold">Douglas Costa</Text>
-              <Text align="center">Manager</Text>
-            </Card>
+            <ProfileCard description="Manager" image={personImage2} title="Douglas Costa" />
           </Col>
           <Col sm={3}>
-            <Card>
-              <Image src={personImage3} />
-              <Text align="center" size="h3" color="dark" weight="semiBold">John Doe</Text>
-              <Text align="center">SEO Expert</Text>
-            </Card>
+            <ProfileCard description="SEO Expert" image={personImage3} title="John Doe" />
           </Col>
           <Col sm={3}>
-            <Card>
-              <Image src={personImage4} />
-              <Text align="center" size="h3" color="dark" weight="semiBold">Steven Smith</Text>
-              <Text align="center">Frontend Developer</Text>
-            </Card>
+            <ProfileCard description="Frontend Developer" image={personImage4} title="Steven Smith" />
           </Col>
         </Row>
       </Container>
