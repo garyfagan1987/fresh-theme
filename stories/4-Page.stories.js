@@ -16,6 +16,7 @@ import Navigation from '../src/components/molecules/navigation';
 import Margin from '../src/components/margin';
 import Section from '../src/components/section';
 import Text from '../src/components/text';
+import Title from '../src/components/molecules/title';
 
 import { PrimaryButton, SecondaryButton } from '../src/components/button';
 import { HorizontalMenu, VerticalMenu } from '../src/components/menu';
@@ -59,7 +60,7 @@ export const page = () => (
     <Hero leftContent={<Image src={imageFile4} />} rightContent={<RightContent />} />
     <Section theme="transparent">
       <Container>
-        <Text align="center" color="dark" margin="0 0 1.5rem" size="h2" weight="semiBold">Whats included?</Text>
+        <Title align="center">Whats included?</Title>
         <Margin bottom="lg">
           <Row>
             <Col sm={4}>
@@ -131,7 +132,7 @@ export const page = () => (
           <Row>
             <Col sm={6}>
               <Flex alignItems="flex-start" flexDirection="column" justifyContent="center" stretch>
-                <Text color="dark" margin="0 0 1.5rem" size="h2" weight="semiBold">Get Started With Our Software</Text>
+                <Title>Get Started With Our Software</Title>
                 <Text>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
                 <List>
                   <li>Unlimited Video Call</li>
@@ -153,7 +154,7 @@ export const page = () => (
             </Col>
             <Col sm={6}>
               <Flex alignItems="flex-start" flexDirection="column" justifyContent="center" stretch>
-                <Text color="dark" margin="0 0 1.5rem" size="h2" weight="semiBold">Engineered And Optimization</Text>
+                <Title>Engineered And Optimization</Title>
                 <Text>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
                 <List>
                   <li>Unlimited Video Call</li>
@@ -168,7 +169,7 @@ export const page = () => (
         <Row>
           <Col sm={6}>
             <Flex alignItems="flex-start" flexDirection="column" justifyContent="center" stretch>
-              <Text color="dark" margin="0 0 1.5rem" size="h2" weight="semiBold">Quick & Easy Process</Text>
+              <Title>Quick & Easy Process</Title>
               <Text>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
               <List>
                 <li>Unlimited Video Call</li>
@@ -186,7 +187,7 @@ export const page = () => (
     </Section>
     <Section theme="primary">
       <Container>
-        <Text align="center" margin="0 0 1.5rem" color="dark" size="h2" weight="semiBold">Our Team</Text>
+        <Title align="center">Our Team</Title>
         <Text align="center" size="h4">Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
         <Row>
           <Col sm={3}>
@@ -222,7 +223,7 @@ export const page = () => (
     </Section>
     <Section theme="transparent">
       <Container>
-        <Text align="center" color="dark" margin="0 0 1.5rem" size="h2" weight="semiBold">Easy Pricing Plans</Text>
+        <Title align="center">Easy Pricing Plans</Title>
         <Text align="center" size="h4">Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
         <Row>
           <Col sm={4}>
@@ -281,7 +282,7 @@ export const page = () => (
           </Col>
           <Col sm={6}>
             <Flex alignItems="flex-start" flexDirection="column" justifyContent="center" style={{height: '100%'}}>
-              <Text color="dark" margin="0 0 1.5rem" size="h2" weight="semiBold">Build Beautiful Interface Into Your Application</Text>
+              <Title>Build Beautiful Interface Into Your Application</Title>
               <Text size="h4">Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
               <List>
                 <li>Unlimited Video Call</li>
