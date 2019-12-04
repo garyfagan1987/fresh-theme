@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 
-import {PrimaryButton, SecondaryButton} from '../src/components/button';
+import Button from '../src/components/button';
 import Card from '../src/components/card';
 import Image from '../src/components/image';
 import Section from '../src/components/section';
@@ -68,7 +68,7 @@ export const pricing = () => (
             <Text align="center" color="light" decoration="line-through">Unlimited Staff Accounts</Text>
             <Text align="center" color="light" decoration="line-through">Web Booking Widget</Text>
             <Text align="center" color="light" decoration="line-through">Monthly Reports and Analytics</Text>
-            <PrimaryButton fullWidth>Get Started</PrimaryButton>
+            <Button fullWidth>Get Started</Button>
           </Card>
         </Col>
         <Col sm={4}>
@@ -83,7 +83,7 @@ export const pricing = () => (
             <Text align="center">Unlimited Staff Accounts</Text>
             <Text align="center" color="light" decoration="line-through">Web Booking Widget</Text>
             <Text align="center" color="light" decoration="line-through">Monthly Reports and Analytics</Text>
-            <PrimaryButton fullWidth>Get Started</PrimaryButton>
+            <Button fullWidth>Get Started</Button>
           </Card>
         </Col>
         <Col sm={4}>
@@ -98,7 +98,7 @@ export const pricing = () => (
             <Text align="center">Unlimited Staff Accounts</Text>
             <Text align="center">Web Booking Widget</Text>
             <Text align="center">Monthly Reports and Analytics</Text>
-            <PrimaryButton fullWidth>Get Started</PrimaryButton>
+            <Button fullWidth>Get Started</Button>
           </Card>
         </Col>
       </Row>

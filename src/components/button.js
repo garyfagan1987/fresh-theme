@@ -1,9 +1,12 @@
+import React from 'react';
 import styled from 'styled-components';
+import PropTypes from "prop-types";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { darken } from 'polished';
 
 import styles from '../styles/colours';
 
-export const PrimaryButton = styled.button`
+const Primary = styled.button`
   border: 0;
   box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 0.4rem;
   color: ${styles.white};
@@ -54,7 +57,7 @@ export const PrimaryButton = styled.button`
 	}
 `;
 
-export const SecondaryButton = styled.button`
+const Secondary = styled.button`
   background-color: transparent;
   border: 1px solid #FFF;
   color: ${styles.white};
@@ -89,3 +92,36 @@ export const SecondaryButton = styled.button`
     top: 0.2rem;
   }
 `;
+
+const Button = ({
+  children,
+  fullWidth,
+  icon,
+  type
+}) => {
+  return type == 'primary' ? (
+    <Primary fullWidth={fullWidth}>
+      {icon && <FontAwesomeIcon icon={icon} />}
+      &nbsp;&nbsp;{children}
+    </Primary>
+  ) : (
+    <Secondary fullWidth={fullWidth}>
+      {icon && <FontAwesomeIcon icon={icon} />}
+      &nbsp;&nbsp;{children}
+    </Secondary>
+  );
+};
+
+Button.propTypes = {
+  children: PropTypes.string.isRequired,
+  fullWidth: PropTypes.bool,
+  icon:  PropTypes.shape(),
+  type: PropTypes.oneOf(['primary', 'secondary']),
+}
+
+Button.defaultProps = {
+  fullWidth: false,
+  type: 'primary',
+}
+
+export default Button;

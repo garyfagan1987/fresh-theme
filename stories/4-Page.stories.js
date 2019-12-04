@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-grid-system';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload, faGrinStars, faPaintRoller, faPuzzlePiece, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faFontAwesomeFlag, faReact } from '@fortawesome/free-brands-svg-icons';
 
+import Button from '../src/components/button';
 import Buttons from '../src/components/buttons';
 import Card from '../src/components/card';
 import Flex from '../src/components/flex';
@@ -19,7 +19,6 @@ import Section from '../src/components/section';
 import Text from '../src/components/text';
 import Title from '../src/components/molecules/title';
 
-import { PrimaryButton, SecondaryButton } from '../src/components/button';
 import { HorizontalMenu, VerticalMenu } from '../src/components/menu';
 
 import imageFile1 from '../static/image-1.png';
@@ -49,17 +48,10 @@ const HeroContent = () => (
     <Text as="h1" color="white" margin="0" size="h1" weight="semiBold">A beautiful suite of React components</Text>
     <Text color="white" size="h4">Our React components are beautifully crafted to create a variety of landing pages to suit you need.</Text>
     <Buttons>
-      <PrimaryButton>Get Started</PrimaryButton>
-      <SecondaryButton theme="transparent">Learn More</SecondaryButton>
+      <Button>Get Started</Button>
+      <Button type="secondary">Learn More</Button>
     </Buttons>
   </>
-);
-
-const PromotionButton = () => (
-  <PrimaryButton>
-    <FontAwesomeIcon icon={faDownload} />
-    &nbsp;&nbsp;Download
-  </PrimaryButton>
 );
 
 export const page = () => (
@@ -119,7 +111,7 @@ export const page = () => (
         </Row>
       </Container>
     </Section>
-    <Promotion label="Download and try out the Fresh Theme today!" button={<PromotionButton />} />
+    <Promotion label="Download and try out the Fresh Theme today!" button={<Button icon={faDownload}>Download</Button>} />
     <Section theme="transparent">
       <Container>
         <Margin bottom="lg">
@@ -133,7 +125,7 @@ export const page = () => (
                   <li>Add Favourite contact</li>
                   <li>Camera Filter</li>
                 </List>
-                <PrimaryButton>Read More</PrimaryButton>
+                <Button>Read More</Button>
               </Flex>
             </Col>
             <Col sm={6}>
@@ -155,7 +147,7 @@ export const page = () => (
                   <li>Add Favourite contact</li>
                   <li>Camera Filter</li>
                 </List>
-                <PrimaryButton>Read More</PrimaryButton>
+                <Button>Read More</Button>
               </Flex>
             </Col>
           </Row>
@@ -170,7 +162,7 @@ export const page = () => (
                 <li>Add Favourite contact</li>
                 <li>Camera Filter</li>
               </List>
-              <PrimaryButton>Read More</PrimaryButton>
+              <Button>Read More</Button>
             </Flex>
           </Col>
           <Col sm={6}>
@@ -232,7 +224,7 @@ export const page = () => (
               <Text align="center" color="light" decoration="line-through">Unlimited Staff Accounts</Text>
               <Text align="center" color="light" decoration="line-through">Web Booking Widget</Text>
               <Text align="center" color="light" decoration="line-through">Monthly Reports and Analytics</Text>
-              <PrimaryButton fullWidth>Get Started</PrimaryButton>
+              <Button fullWidth>Get Started</Button>
             </Card>
           </Col>
           <Col sm={4}>
@@ -247,7 +239,7 @@ export const page = () => (
               <Text align="center">Unlimited Staff Accounts</Text>
               <Text align="center" color="light" decoration="line-through">Web Booking Widget</Text>
               <Text align="center" color="light" decoration="line-through">Monthly Reports and Analytics</Text>
-              <PrimaryButton fullWidth>Get Started</PrimaryButton>
+              <Button fullWidth>Get Started</Button>
             </Card>
           </Col>
           <Col sm={4}>
@@ -262,7 +254,7 @@ export const page = () => (
               <Text align="center">Unlimited Staff Accounts</Text>
               <Text align="center">Web Booking Widget</Text>
               <Text align="center">Monthly Reports and Analytics</Text>
-              <PrimaryButton fullWidth>Get Started</PrimaryButton>
+              <Button fullWidth>Get Started</Button>
             </Card>
           </Col>
         </Row>

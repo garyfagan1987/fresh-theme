@@ -1,11 +1,10 @@
 import React from 'react';
 
+import Button from '../src/components/button';
 import Buttons from '../src/components/buttons';
 import Hero from '../src/components/molecules/hero';
 import Image from '../src/components/image';
 import Text from '../src/components/text';
-
-import { PrimaryButton, SecondaryButton } from '../src/components/button';
 
 import imageFile4 from '../static/image-4.png';
 
@@ -18,8 +17,8 @@ const RightContent = () => (
     <Text as="h1" color="white" margin="0" size="h1" weight="semiBold">A beautiful suite of React components</Text>
     <Text color="white" size="h4">Our React components are beautifully crafted to create a variety of landing pages to suit you need.</Text>
     <Buttons>
-      <PrimaryButton>Get Started</PrimaryButton>
-      <SecondaryButton theme="transparent">Learn More</SecondaryButton>
+      <Button>Get Started</Button>
+      <Button type="secondary">Learn More</Button>
     </Buttons>
   </>
 )
