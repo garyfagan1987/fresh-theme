@@ -5,13 +5,10 @@ import { faFontAwesomeFlag, faReact } from '@fortawesome/free-brands-svg-icons';
 
 import Button from '../src/components/button';
 import Buttons from '../src/components/buttons';
-import Card from '../src/components/card';
 import ContentWithImage from '../src/components/molecules/content-with-image';
-import Flex from '../src/components/flex';
 import Image from '../src/components/image';
 import Hero from '../src/components/molecules/hero';
 import IconCard from '../src/components/molecules/icon-card';
-import Link from '../src/components/link';
 import List from '../src/components/list';
 import Navigation from '../src/components/molecules/navigation';
 import Margin from '../src/components/margin';
@@ -22,7 +19,7 @@ import Section from '../src/components/section';
 import Text from '../src/components/text';
 import Title from '../src/components/molecules/title';
 
-import { HorizontalMenu, VerticalMenu } from '../src/components/menu';
+import Menu from '../src/components/menu';
 
 import imageFile1 from '../static/image-1.png';
 import imageFile2 from '../static/image-2.png';
@@ -162,7 +159,7 @@ export const page = () => (
           </List>
           <Button>Read More</Button>
         </ContentWithImage>
-        <ContentWithImage image={imageFile2} imagePosition="left">
+        <ContentWithImage image={imageFile2}>
           <Title>Engineered And Optimization</Title>
           <Text>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
           <List>
@@ -223,22 +220,15 @@ export const page = () => (
     </Section>
     <Section theme="white">
       <Container>
-        <Row>
-          <Col sm={6}>
-            <Image src={imageFile5} />
-          </Col>
-          <Col sm={6}>
-            <Flex alignItems="flex-start" flexDirection="column" justifyContent="center" style={{height: '100%'}}>
-              <Title>Build Beautiful Interface Into Your Application</Title>
-              <Text size="h4">Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
-              <List>
-                <li>Unlimited Video Call</li>
-                <li>Add Favourite contact</li>
-                <li>Camera Filter</li>
-              </List>
-            </Flex>
-          </Col>
-        </Row>
+        <ContentWithImage image={imageFile5}>
+          <Title>Build Beautiful Interface Into Your Application</Title>
+          <Text size="h4">Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
+          <List>
+            <li>Unlimited Video Call</li>
+            <li>Add Favourite contact</li>
+            <li>Camera Filter</li>
+          </List>
+        </ContentWithImage>
       </Container>
     </Section>
     <Section theme="transparent">
@@ -250,72 +240,40 @@ export const page = () => (
           </Col>
           <Col sm={3}>
             <Text color="dark" size="h3" weight="semiBold">Company</Text>
-            <VerticalMenu>
-              <li>
-                <Link animate href="./" weight="semiBold">About</Link>
-              </li>
-              <li>
-                <Link animate href="./" weight="semiBold">Careers</Link>
-              </li>
-              <li>
-                <Link animate href="./" weight="semiBold">Awards</Link>
-              </li>
-              <li>
-                <Link animate href="./" weight="semiBold">User Program</Link>
-              </li>
-            </VerticalMenu>
+            <Menu animate items={[
+              { label: 'About', path: './' },
+              { label: 'Careers', path: './' },
+              { label: 'Awards', path: './' },
+              { label: 'User Program', path: './' }
+            ]} />
           </Col>
           <Col sm={3}>
             <Text color="dark" size="h3" weight="semiBold">Products</Text>
-            <VerticalMenu>
-              <li>
-                <Link animate href="./" weight="semiBold">Integrations</Link>
-              </li>
-              <li>
-                <Link animate href="./" weight="semiBold">API</Link>
-              </li>
-              <li>
-                <Link animate href="./" weight="semiBold">Pricing</Link>
-              </li>
-              <li>
-                <Link animate href="./" weight="semiBold">Documentation</Link>
-              </li>
-            </VerticalMenu>
+            <Menu animate items={[
+              { label: 'Integrations', path: './' },
+              { label: 'API', path: './' },
+              { label: 'Pricing', path: './' },
+              { label: 'Documentation', path: './' }
+            ]} />
           </Col>
           <Col sm={3}>
             <Text color="dark" size="h3" weight="semiBold">Support</Text>
-            <VerticalMenu>
-              <li>
-                <Link animate href="./" weight="semiBold">About</Link>
-              </li>
-              <li>
-                <Link animate href="./" weight="semiBold">Contact</Link>
-              </li>
-              <li>
-                <Link animate href="./" weight="semiBold">FAQ</Link>
-              </li>
-              <li>
-                <Link animate href="./" weight="semiBold">Press</Link>
-              </li>
-            </VerticalMenu>
+            <Menu animate items={[
+              { label: 'About', path: './' },
+              { label: 'Contact', path: './' },
+              { label: 'FAQ', path: './' },
+              { label: 'Press', path: './' }
+            ]} />
           </Col>
         </Row>
       </Container>
       <Container>
-        <HorizontalMenu plane="horizontal" align="center">
-          <li>
-            <Link href="./" weight="semiBold">About</Link>
-          </li>
-          <li>
-            <Link href="./" weight="semiBold">Contact</Link>
-          </li>
-          <li>
-            <Link href="./" weight="semiBold">FAQ</Link>
-          </li>
-          <li>
-            <Link href="./" weight="semiBold">Press</Link>
-          </li>
-        </HorizontalMenu>
+        <Menu align="center" type="horizontal" items={[
+          { label: 'About', path: './' },
+          { label: 'Contact', path: './' },
+          { label: 'FAQ', path: './' },
+          { label: 'Press', path: './' }
+        ]} />
         <Text align="center" as="span">Copyright @ 2019 Fresh Theme. All rights reserved</Text>
       </Container>
     </Section>

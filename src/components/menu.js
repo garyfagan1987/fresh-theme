@@ -1,7 +1,10 @@
+import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-export const HorizontalMenu = styled.ul`
+import Link from './link';
+
+const Horizontal = styled.ul`
   list-style: none;
   margin: 1.5rem 0;
   padding: 0;
@@ -28,15 +31,15 @@ export const HorizontalMenu = styled.ul`
   }
 `;
 
-HorizontalMenu.propTypes = {
+Horizontal.propTypes = {
   align: PropTypes.oneOf(['center', 'left', 'right']),
 }
 
-HorizontalMenu.defaultProps = {
+Horizontal.defaultProps = {
   align: 'left',
 }
 
-export const VerticalMenu = styled.ul`
+const Vertical = styled.ul`
   list-style: none;
   margin: 1.5rem 0;
   padding: 0;
@@ -48,10 +51,70 @@ export const VerticalMenu = styled.ul`
   }
 `;
 
-VerticalMenu.propTypes = {
+Vertical.propTypes = {
   align: PropTypes.oneOf(['center', 'left', 'right']),
 }
 
-VerticalMenu.defaultProps = {
+Vertical.defaultProps = {
   align: 'left',
 }
+  
+const Menu = ({
+  align,
+  animate,
+  items,
+  type
+}) => {
+  if(type == 'horizontal') {
+    return (
+      <Horizontal align={align}>
+        {items.map(item => (
+          <li>
+            <Link animate={animate} href={item.path} weight="semiBold">{item.label}</Link>
+          </li>
+        ))}
+      </Horizontal>
+    )
+  }
+  if(type == 'navigation') {
+    return (
+      <Horizontal align={align}>
+        {items.map(item => (
+          <li>
+            <Link key={item.label} animate color="white" hoverColor="white" href={item.path} weight="semiBold">{item.label}</Link>
+          </li>
+        ))}
+      </Horizontal>
+    )
+  }
+  if(type == 'vertical') {
+    return (
+      <Vertical align={align}>
+        {items.map(item => (
+          <li>
+            <Link animate={animate} href={item.path} weight="semiBold">{item.label}</Link>
+          </li>
+        ))}
+      </Vertical>
+    )
+  }
+};
+
+Menu.propTypes = {
+  align: PropTypes.oneOf(['center', 'left', 'right']),
+  animate: false,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      path: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  type: PropTypes.oneOf(['horizontal', 'navigation', 'vertical']),
+}
+
+Menu.defaultProps = {
+  align: 'left',
+  type: 'vertical',
+}
+
+export default Menu;

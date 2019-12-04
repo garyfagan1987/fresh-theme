@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 import { Container } from 'react-grid-system';
 
 import Flex from '../flex';
-import Link from '../link';
-import { HorizontalMenu } from '../menu';
+import Menu from '../menu';
 import Text from '../text';
 
 import styles from '../../styles/colours';
@@ -24,15 +23,9 @@ const Navigation = ({
 }) => (
   <NavigationOuter>
     <Container>
-    <Flex>
+      <Flex>
         <Text color="white" size="h2" weight="bold">{logo}</Text>
-        <HorizontalMenu align="right">
-          {items.map(item => (
-            <li>
-              <Link key={item.label} animate color="white" hoverColor="white" href={item.path} weight="semiBold">{item.label}</Link>
-            </li>
-          ))}
-        </HorizontalMenu>
+        <Menu align="right" animate type="navigation" items={items} />
       </Flex>
     </Container>
   </NavigationOuter>

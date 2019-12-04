@@ -1,46 +1,29 @@
 import React from 'react';
 
-import Link from '../src/components/link';
-import { HorizontalMenu, VerticalMenu } from '../src/components/menu';
+import Menu from '../src/components/menu';
 
 export default {
   title: 'Menu',
 };
 
-export const horizontalMenu = () => (
+export const horizontal = () => (
   <div style={{padding: '20px'}}>
-    <HorizontalMenu>
-      <li>
-        <Link href="./" weight="semiBold">About</Link>
-      </li>
-      <li>
-        <Link href="./" weight="semiBold">Contact</Link>
-      </li>
-      <li>
-        <Link href="./" weight="semiBold">FAQ</Link>
-      </li>
-      <li>
-        <Link href="./" weight="semiBold">Press</Link>
-      </li>
-    </HorizontalMenu>
+    <Menu type="horizontal" items={[
+      { label: 'About', path: './' },
+      { label: 'Contact', path: './' },
+      { label: 'FAQ', path: './' },
+      { label: 'Press', path: './' }
+    ]} />
   </div>
 );
 
-export const verticalMenu = () => (
+export const vertical = () => (
   <div style={{padding: '20px'}}>
-    <VerticalMenu>
-      <li>
-        <Link animate href="./" weight="semiBold">About</Link>
-      </li>
-      <li>
-        <Link animate href="./" weight="semiBold">Contact</Link>
-      </li>
-      <li>
-        <Link animate href="./" weight="semiBold">FAQ</Link>
-      </li>
-      <li>
-        <Link animate href="./" weight="semiBold">Press</Link>
-      </li>
-    </VerticalMenu>
+    <Menu items={[
+      { label: 'About', path: './' },
+      { label: 'Contact', path: './' },
+      { label: 'FAQ', path: './' },
+      { label: 'Press', path: './' }
+    ]} />
   </div>
 );
