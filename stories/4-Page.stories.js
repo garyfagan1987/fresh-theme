@@ -44,7 +44,7 @@ const navigationItems = [
   { label: 'Press', path: './' }
 ];
 
-const RightContent = () => (
+const HeroContent = () => (
   <>
     <Text as="h1" color="white" margin="0" size="h1" weight="semiBold">A beautiful suite of React components</Text>
     <Text color="white" size="h4">Our React components are beautifully crafted to create a variety of landing pages to suit you need.</Text>
@@ -65,7 +65,7 @@ const PromotionButton = () => (
 export const page = () => (
   <main>
     <Navigation logo="Fresh Theme" items={navigationItems} />
-    <Hero leftContent={<Image src={imageFile4} />} rightContent={<RightContent />} />
+    <Hero leftContent={<Image src={imageFile4} />} rightContent={<HeroContent />} />
     <Section theme="transparent">
       <Container>
         <Title align="center">Whats included?</Title>
