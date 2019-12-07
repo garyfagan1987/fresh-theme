@@ -6,10 +6,46 @@ import Card from '../src/components/card';
 import Image from '../src/components/image';
 import Section from '../src/components/section';
 import Text from '../src/components/text';
+import PriceCard from '../src/components/molecules/price-card';
 
 export default {
   title: 'Card',
 };
+
+const pricingItems = [
+  {
+    label: 'Send 5 invoices and quotes',
+    type: ['personal', 'business', 'enterprise']
+  },
+  {
+    label: '2 Clients and Products',
+    type: ['personal', 'business', 'enterprise']
+  },
+  {
+    label: 'Invoicing and Payments',
+    type: ['personal', 'business', 'enterprise']
+  },
+  {
+    label: 'Enter 5 bills',
+    type: ['personal', 'business', 'enterprise']
+  },
+  {
+    label: 'Data Security and Backups',
+    type: ['personal', 'business', 'enterprise']
+  },
+  {
+    label: 'Unlimited Staff Accounts',
+    type: ['business', 'enterprise']
+  },
+  {
+    label: 'Web Booking Widget',
+    type: ['enterprise']
+  },
+  {
+    label: 'Monthly Reports and Analytics',
+    type: ['enterprise']
+  },
+];
 
 export const profiles = () => (
   <Section theme="primary">
@@ -57,49 +93,13 @@ export const pricing = () => (
       <Text align="center" size="h4">Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
       <Row>
         <Col sm={4}>
-          <Card>
-            <Text align="center" color="dark" size="h3" weight="bold">£15 / Month</Text>
-            <Text align="center" color="green" size="h3" weight="bold">Personal</Text>
-            <Text align="center">Send 5 invoices and quotes</Text>
-            <Text align="center">2 Clients and Products</Text>
-            <Text align="center">Invoicing and Payments</Text>
-            <Text align="center">Enter 5 bills</Text>
-            <Text align="center">Data Security and Backups</Text>
-            <Text align="center" color="light" decoration="line-through">Unlimited Staff Accounts</Text>
-            <Text align="center" color="light" decoration="line-through">Web Booking Widget</Text>
-            <Text align="center" color="light" decoration="line-through">Monthly Reports and Analytics</Text>
-            <Button fullWidth>Get Started</Button>
-          </Card>
+          <PriceCard buttonLabel="Get Started" items={pricingItems} price="£15 / Month" title="Personal" type="personal" />
         </Col>
         <Col sm={4}>
-          <Card>
-            <Text align="center" color="dark" size="h3" weight="bold">£39 / Month</Text>
-            <Text align="center" color="green" size="h3" weight="bold">Business</Text>
-            <Text align="center">Send 5 invoices and quotes</Text>
-            <Text align="center">2 Clients and Products</Text>
-            <Text align="center">Invoicing and Payments</Text>
-            <Text align="center">Enter 5 bills</Text>
-            <Text align="center">Data Security and Backups</Text>
-            <Text align="center">Unlimited Staff Accounts</Text>
-            <Text align="center" color="light" decoration="line-through">Web Booking Widget</Text>
-            <Text align="center" color="light" decoration="line-through">Monthly Reports and Analytics</Text>
-            <Button fullWidth>Get Started</Button>
-          </Card>
+          <PriceCard buttonLabel="Get Started" items={pricingItems} price="£39 / Month" title="Business" type="business" />
         </Col>
         <Col sm={4}>
-          <Card>
-            <Text align="center" color="dark" size="h3" weight="bold">£99 / Month</Text>
-            <Text align="center" color="green" size="h3" weight="bold">Enterprise</Text>
-            <Text align="center">Send 5 invoices and quotes</Text>
-            <Text align="center">2 Clients and Products</Text>
-            <Text align="center">Invoicing and Payments</Text>
-            <Text align="center">Enter 5 bills</Text>
-            <Text align="center">Data Security and Backups</Text>
-            <Text align="center">Unlimited Staff Accounts</Text>
-            <Text align="center">Web Booking Widget</Text>
-            <Text align="center">Monthly Reports and Analytics</Text>
-            <Button fullWidth>Get Started</Button>
-          </Card>
+          <PriceCard buttonLabel="Get Started" items={pricingItems} price="£99 / Month" title="Enterprise" type="enterprise" />
         </Col>
       </Row>
     </Container>
