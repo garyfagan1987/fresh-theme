@@ -234,11 +234,11 @@ export const page = () => (
     <Section theme="transparent">
       <Container>
         <Row>
-          <Col sm={3}>
+          <Col md={3} sm={6} xs={6}>
             <Text color="primary" size="h3" weight="semiBold">Fresh Theme</Text>
             <Text>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
           </Col>
-          <Col sm={3}>
+          <Col md={3} sm={6} xs={6}>
             <Text color="dark" size="h3" weight="semiBold">Company</Text>
             <Menu animate items={[
               { label: 'About', path: './' },
@@ -247,7 +247,7 @@ export const page = () => (
               { label: 'User Program', path: './' }
             ]} />
           </Col>
-          <Col sm={3}>
+          <Col md={3} sm={6} xs={6}>
             <Text color="dark" size="h3" weight="semiBold">Products</Text>
             <Menu animate items={[
               { label: 'Integrations', path: './' },
@@ -256,7 +256,7 @@ export const page = () => (
               { label: 'Documentation', path: './' }
             ]} />
           </Col>
-          <Col sm={3}>
+          <Col md={3} sm={6} xs={6}>
             <Text color="dark" size="h3" weight="semiBold">Support</Text>
             <Menu animate items={[
               { label: 'About', path: './' },
