@@ -6,7 +6,7 @@ import Text from '../atoms/text';
 const Title = ({
   align,
   children
-}) => <Text align={align} color="dark" margin="0 0 1.5rem" size="h2" weight="semiBold">{children}</Text>;
+}) => <Text align={align} margin="0 0 1.5rem" size="h2" weight="semiBold">{children}</Text>;
 
 Title.propTypes = {
   align: PropTypes.oneOf(['center', 'left', 'right']),

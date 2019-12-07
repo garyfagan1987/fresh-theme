@@ -69,7 +69,7 @@ const Menu = ({
     return (
       <Horizontal align={align}>
         {items.map(item => (
-          <li>
+          <li key={item.label}>
             <Link animate={animate} href={item.path} weight="semiBold">{item.label}</Link>
           </li>
         ))}
@@ -80,8 +80,8 @@ const Menu = ({
     return (
       <Horizontal align={align}>
         {items.map(item => (
-          <li>
-            <Link key={item.label} animate color="white" hoverColor="white" href={item.path} weight="semiBold">{item.label}</Link>
+          <li key={item.label}>
+            <Link animate color="white" hoverColor="white" href={item.path} weight="semiBold">{item.label}</Link>
           </li>
         ))}
       </Horizontal>
@@ -91,7 +91,7 @@ const Menu = ({
     return (
       <Vertical align={align}>
         {items.map(item => (
-          <li>
+          <li key={item.label}>
             <Link animate={animate} href={item.path} weight="semiBold">{item.label}</Link>
           </li>
         ))}
@@ -102,7 +102,7 @@ const Menu = ({
 
 Menu.propTypes = {
   align: PropTypes.oneOf(['center', 'left', 'right']),
-  animate: false,
+  animate: PropTypes.bool,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
@@ -114,6 +114,7 @@ Menu.propTypes = {
 
 Menu.defaultProps = {
   align: 'left',
+  animate: false,
   type: 'vertical',
 }
 

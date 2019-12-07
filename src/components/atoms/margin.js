@@ -11,10 +11,10 @@ const Margin = styled.div`
 `;
 
 Margin.propTypes = {
-  bottom: PropTypes.oneOf(PropTypes.oneOf(Object.keys(margins))),
-  left: PropTypes.oneOf(PropTypes.oneOf(Object.keys(margins))),
-  right: PropTypes.oneOf(PropTypes.oneOf(Object.keys(margins))),
-  top: PropTypes.oneOf(PropTypes.oneOf(Object.keys(margins))),
+  bottom: PropTypes.oneOf(Object.keys(margins)),
+  left: PropTypes.oneOf(Object.keys(margins)),
+  right: PropTypes.oneOf(Object.keys(margins)),
+  top: PropTypes.oneOf(Object.keys(margins)),
 }
 
 Margin.defaultProps = {

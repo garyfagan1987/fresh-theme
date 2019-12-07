@@ -17,9 +17,9 @@ const PriceCard = ({
     <Text align="center" color="primary" size="h3" weight="semiBold">{title}</Text>
     {items.map(item => {
       return item.type.includes(type) ? (
-        <Text align="center">{item.label}</Text>
+        <Text key={item.label} align="center">{item.label}</Text>
       ) : (
-        <Text align="center" color="light" decoration="line-through">{item.label}</Text>
+        <Text key={item.label} align="center" color="light" decoration="line-through">{item.label}</Text>
       );
     })}
     <Button fullWidth>{buttonLabel}</Button>
@@ -28,10 +28,10 @@ const PriceCard = ({
 
 PriceCard.propTypes = {
   buttonLabel: PropTypes.string.isRequired,
-  items: PropTypes.shape({
+  items: PropTypes.arrayOf(PropTypes.shape({
     label: PropTypes.string.isRequired,
-    type: PropTypes.oneOf(['personal', 'business', 'enterprise']).isRequired,
-  }).isRequired,
+    type: PropTypes.array.isRequired,
+  })).isRequired,
   price: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   type: PropTypes.oneOf(['personal', 'business', 'enterprise']).isRequired,
