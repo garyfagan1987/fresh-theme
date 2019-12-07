@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Container } from 'react-grid-system';
 
-import Flex from '../flex';
-import Menu from '../menu';
-import Text from '../text';
+import Flex from '../atoms/flex';
+import Menu from '../atoms/menu';
+import Text from '../atoms/text';
 
 import styles from '../../styles/colours';
 

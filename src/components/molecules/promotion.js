@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from "prop-types";
 import { Container } from 'react-grid-system';
 
-import Flex from '../flex';
-import Section from '../section';
-import Text from '../text';
+import Flex from '../atoms/flex';
+import Section from '../atoms/section';
+import Text from '../atoms/text';
 
 const Promotion = ({
   button,

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
-import Card from '../card';
-import Image from '../image';
-import Text from '../text';
+import Card from '../atoms/card';
+import Image from '../atoms/image';
+import Text from '../atoms/text';
 
 const ProfileCard = ({
   description,

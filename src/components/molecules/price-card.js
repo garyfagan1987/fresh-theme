@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
-import Button from '../button';
-import Card from '../card';
-import Text from '../text';
+import Button from '../atoms/button';
+import Card from '../atoms/card';
+import Text from '../atoms/text';
 
 const PriceCard = ({
   buttonLabel,

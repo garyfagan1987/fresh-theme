@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import themes from '../styles/themes';
+import themes from '../../styles/themes';
 
 const Section = styled.section`
   background-color: ${props => themes.section[props.theme].background};

@@ -1,5 +1,5 @@
 import React from 'react';
-import Section from '../src/components/section';
+import Section from '../src/components/atoms/section';
 
 export default {
   title: 'Section',

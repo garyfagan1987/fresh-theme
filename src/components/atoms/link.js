@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import sizes from '../styles/sizes';
-import styles from '../styles/colours';
-import weights from '../styles/weights';
+import sizes from '../../styles/sizes';
+import styles from '../../styles/colours';
+import weights from '../../styles/weights';
 
 const Link = styled.a`
   color: ${props => styles[props.color]};

@@ -5,8 +5,8 @@ import { faCircle } from '@fortawesome/free-solid-svg-icons';
 
 import theme from '../../styles/colours';
 
-import Icon from '../icon';
-import Text from '../text';
+import Icon from '../atoms/icon';
+import Text from '../atoms/text';
 
 const IconCard = ({
   description,

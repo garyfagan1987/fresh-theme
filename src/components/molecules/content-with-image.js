@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from "prop-types";
 import { Row, Col } from 'react-grid-system';
 
-import Flex from '../flex';
-import Image from '../image';
-import Margin from '../margin';
+import Flex from '../atoms/flex';
+import Image from '../atoms/image';
+import Margin from '../atoms/margin';
 
 const RenderContent = (children) => (
   <Flex alignItems="flex-start" flexDirection="column" justifyContent="center" stretch>

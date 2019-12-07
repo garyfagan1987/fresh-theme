@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import styles from '../styles/colours';
+import styles from '../../styles/colours';
 
 const List = styled.ul`
   color: ${styles.body};

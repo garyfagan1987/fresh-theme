@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { darken } from 'polished';
 
-import styles from '../styles/colours';
+import styles from '../../styles/colours';
 
 const Primary = styled.button`
   border: 0;

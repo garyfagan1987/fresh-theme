@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import margins from '../styles/margins';
+import margins from '../../styles/margins';
 
 const Margin = styled.div`
   margin-bottom: ${props => margins[props.bottom]};

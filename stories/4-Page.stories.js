@@ -3,23 +3,23 @@ import { Container, Row, Col } from 'react-grid-system';
 import { faDownload, faGrinStars, faPaintRoller, faPuzzlePiece, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faFontAwesomeFlag, faReact } from '@fortawesome/free-brands-svg-icons';
 
-import Button from '../src/components/button';
-import Buttons from '../src/components/buttons';
+import Button from '../src/components/atoms/button';
+import Buttons from '../src/components/atoms/buttons';
 import ContentWithImage from '../src/components/molecules/content-with-image';
-import Image from '../src/components/image';
+import Image from '../src/components/atoms/image';
 import Hero from '../src/components/molecules/hero';
 import IconCard from '../src/components/molecules/icon-card';
-import List from '../src/components/list';
+import List from '../src/components/atoms/list';
 import Navigation from '../src/components/molecules/navigation';
-import Margin from '../src/components/margin';
+import Margin from '../src/components/atoms/margin';
 import PriceCard from '../src/components/molecules/price-card';
 import ProfileCard from '../src/components/molecules/profile-card';
 import Promotion from '../src/components/molecules/promotion';
-import Section from '../src/components/section';
-import Text from '../src/components/text';
+import Section from '../src/components/atoms/section';
+import Text from '../src/components/atoms/text';
 import Title from '../src/components/molecules/title';
 
-import Menu from '../src/components/menu';
+import Menu from '../src/components/atoms/menu';
 
 import imageFile1 from '../static/image-1.png';
 import imageFile2 from '../static/image-2.png';

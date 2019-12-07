@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import styles from '../styles/colours';
-import sizes from '../styles/sizes';
+import styles from '../../styles/colours';
+import sizes from '../../styles/sizes';
 
 const Icon = styled.p`
   color: ${props => styles[props.color]};

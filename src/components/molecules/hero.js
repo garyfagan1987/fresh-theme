@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import styled from 'styled-components';
 import { Row, Col } from 'react-grid-system';
 
-import Flex from '../flex';
+import Flex from '../atoms/flex';
 import styles from '../../styles/colours';
 
 const HeroBackground = styled.div`

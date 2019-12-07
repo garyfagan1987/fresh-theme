@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import styles from '../styles/colours';
-import sizes from '../styles/sizes';
-import weights from '../styles/weights';
+import styles from '../../styles/colours';
+import sizes from '../../styles/sizes';
+import weights from '../../styles/weights';
 
 const Text = styled.p`
   color: ${props => styles[props.color]};

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Button from '../src/components/button';
-import Buttons from '../src/components/buttons';
+import Button from '../src/components/atoms/button';
+import Buttons from '../src/components/atoms/buttons';
 import Hero from '../src/components/molecules/hero';
-import Image from '../src/components/image';
-import Text from '../src/components/text';
+import Image from '../src/components/atoms/image';
+import Text from '../src/components/atoms/text';
 
 import imageFile4 from '../static/image-4.png';
 

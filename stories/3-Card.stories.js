@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 
-import Button from '../src/components/button';
-import Card from '../src/components/card';
-import Image from '../src/components/image';
-import Section from '../src/components/section';
-import Text from '../src/components/text';
+import Button from '../src/components/atoms/button';
+import Card from '../src/components/atoms/card';
+import Image from '../src/components/atoms/image';
 import PriceCard from '../src/components/molecules/price-card';
+import Section from '../src/components/atoms/section';
+import Text from '../src/components/atoms/text';
 
 export default {
   title: 'Card',
