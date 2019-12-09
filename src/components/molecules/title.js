@@ -13,7 +13,7 @@ Title.propTypes = {
   children: PropTypes.string.isRequired,
 }
 
-Text.defaultProps = {
+Title.defaultProps = {
   align: 'left',
 }
 
