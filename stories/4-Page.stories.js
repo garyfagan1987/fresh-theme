@@ -9,7 +9,11 @@ import ContentWithImage from '../src/components/molecules/content-with-image';
 import Image from '../src/components/atoms/image';
 import Hero from '../src/components/molecules/hero';
 import IconCard from '../src/components/molecules/icon-card';
+import Input from '../src/components/atoms/input';
+import InputGroup from '../src/components/atoms/input-group';
+import Label from '../src/components/atoms/label';
 import List from '../src/components/atoms/list';
+import Menu from '../src/components/atoms/menu';
 import Navigation from '../src/components/molecules/navigation';
 import Margin from '../src/components/atoms/margin';
 import PriceCard from '../src/components/molecules/price-card';
@@ -18,8 +22,6 @@ import Promotion from '../src/components/molecules/promotion';
 import Section from '../src/components/atoms/section';
 import Text from '../src/components/atoms/text';
 import Title from '../src/components/molecules/title';
-
-import Menu from '../src/components/atoms/menu';
 
 import imageFile1 from '../static/image-1.png';
 import imageFile2 from '../static/image-2.png';
@@ -231,7 +233,29 @@ export const page = () => (
         </ContentWithImage>
       </Container>
     </Section>
-    <Section theme="transparent">
+    <Section theme="secondary">
+      <Container>
+        <Row>
+          <Col offset={{md: 3}} md={6} sm={6} xs={6}>
+            <Title color="white">Get your free quote today!</Title>
+            <form>
+              <InputGroup>
+                <Label htmlFor="first-name" color="white">First name:</Label>
+                <Input id="first-name" />
+              </InputGroup>
+              <InputGroup>
+                <Label htmlFor="last-name" color="white">Last name:</Label>
+                <Input id="last-name" />
+              </InputGroup>
+              <InputGroup>
+                <Button>Submit</Button>
+              </InputGroup>
+            </form>
+          </Col>
+        </Row>
+      </Container>
+    </Section>
+    <Section theme="white">
       <Container>
         <Row>
           <Col md={3} sm={6} xs={6}>
@@ -266,15 +290,15 @@ export const page = () => (
             ]} />
           </Col>
         </Row>
-      </Container>
-      <Container>
-        <Menu align="center" type="horizontal" items={[
-          { label: 'About', path: './' },
-          { label: 'Contact', path: './' },
-          { label: 'FAQ', path: './' },
-          { label: 'Press', path: './' }
-        ]} />
-        <Text align="center" as="span">Copyright @ 2019 Fresh Theme. All rights reserved</Text>
+        <Margin top="xl">
+          <Menu align="center" type="horizontal" items={[
+            { label: 'About', path: './' },
+            { label: 'Contact', path: './' },
+            { label: 'FAQ', path: './' },
+            { label: 'Press', path: './' }
+          ]} />
+          <Text align="center" size="h5" as="span">Copyright @ 2019 Fresh Theme. All rights reserved</Text>
+        </Margin>
       </Container>
     </Section>
   </main>

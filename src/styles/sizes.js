@@ -4,6 +4,8 @@ const sizes = {
   h2: '3rem',
   h3: '2.5rem',
   h4: '1.6rem',
+  h5: '1.4rem',
+  h6: '1.2rem',
 };
 
 export default sizes;
