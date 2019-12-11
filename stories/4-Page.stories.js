@@ -91,171 +91,185 @@ const HeroContent = () => (
   </>
 );
 
-export const page = () => (
-  <main>
-    <Navigation logo="Fresh Theme" items={navigationItems} />
-    <Hero leftContent={<Image src={imageFile4} />} rightContent={<HeroContent />} />
-    <Section theme="transparent">
-      <Container>
-        <Title align="center">Whats included?</Title>
-        <Margin bottom="lg">
-          <Row>
-            <Col sm={4}>
-              <IconCard
-                description="Packaged with React 16.8+ and the latest version of GatsbyJS with page examples"
-                icon={faReact}
-                title="ReactJS & GatsbyJS"
-              />
-            </Col>
-            <Col sm={4}>
-              <IconCard
-                description="Use the best bits of ES6 and CSS to extend this theme without stress"
-                icon={faPaintRoller}
-                title="Styled Components"
-              />
-            </Col>
-            <Col sm={4}>
-              <IconCard
-                description="A suite of components that are fully customisable and work together"
-                icon={faPuzzlePiece}
-                title="Customisation"
-              />
-            </Col>
-          </Row>
-        </Margin>
+const Services = () => (
+  <Section theme="transparent">
+    <Container>
+      <Title align="center">Whats included?</Title>
+      <Margin bottom="lg">
         <Row>
           <Col sm={4}>
             <IconCard
-              description="All components are SEO friendly so Google can find your content easily"
-              icon={faSearch}
-              title="SEO Friendly"
+              description="Packaged with React 16.8+ and the latest version of GatsbyJS with page examples"
+              icon={faReact}
+              title="ReactJS & GatsbyJS"
             />
           </Col>
           <Col sm={4}>
             <IconCard
-              description="A variety of different pages have already been pre-build to extend upon"
-              icon={faGrinStars}
-              title="10 Pages"
+              description="Use the best bits of ES6 and CSS to extend this theme without stress"
+              icon={faPaintRoller}
+              title="Styled Components"
             />
           </Col>
           <Col sm={4}>
             <IconCard
-              description="Packaged with Font Awesome for all of your iconography requirements"
-              icon={faFontAwesomeFlag}
-              title="Font Awesome"
+              description="A suite of components that are fully customisable and work together"
+              icon={faPuzzlePiece}
+              title="Customisation"
             />
           </Col>
         </Row>
-      </Container>
-    </Section>
-    <Promotion label="Download and try out the Fresh Theme today!" button={<Button icon={faDownload}>Download</Button>} />
-    <Section theme="transparent">
-      <Container>
-        <ContentWithImage image={imageFile1} imagePosition="right">
-          <Title>Get Started With Our Software</Title>
-          <Text>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
-          <List>
-            <li>Unlimited Video Call</li>
-            <li>Add Favourite contact</li>
-            <li>Camera Filter</li>
-          </List>
-          <Button>Read More</Button>
-        </ContentWithImage>
-        <ContentWithImage image={imageFile2}>
-          <Title>Engineered And Optimization</Title>
-          <Text>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
-          <List>
-            <li>Unlimited Video Call</li>
-            <li>Add Favourite contact</li>
-            <li>Camera Filter</li>
-          </List>
-          <Button>Read More</Button>
-        </ContentWithImage>
-        <ContentWithImage image={imageFile3} imagePosition="right">
-          <Title>Quick & Easy Process</Title>
-          <Text>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
-          <List>
-            <li>Unlimited Video Call</li>
-            <li>Add Favourite contact</li>
-            <li>Camera Filter</li>
-          </List>
-          <Button>Read More</Button>
-        </ContentWithImage>
-      </Container>
-    </Section>
-    <Section theme="primary">
-      <Container>
-        <Title align="center">Our Team</Title>
-        <Text align="center" size="h4">Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
-        <Row>
-          <Col sm={3}>
-            <ProfileCard description="CEO" image={personImage1} title="Park Tim" />
-          </Col>
-          <Col sm={3}>
-            <ProfileCard description="Manager" image={personImage2} title="Douglas Costa" />
-          </Col>
-          <Col sm={3}>
-            <ProfileCard description="SEO Expert" image={personImage3} title="John Doe" />
-          </Col>
-          <Col sm={3}>
-            <ProfileCard description="Frontend Developer" image={personImage4} title="Steven Smith" />
-          </Col>
-        </Row>
-      </Container>
-    </Section>
-    <Section theme="transparent">
-      <Container>
-        <Title align="center">Easy Pricing Plans</Title>
-        <Text align="center" size="h4">Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
-        <Row>
-          <Col sm={4}>
-            <PriceCard buttonLabel="Get Started" items={pricingItems} price="£15 / Month" title="Personal" type="personal" />
-          </Col>
-          <Col sm={4}>
-            <PriceCard buttonLabel="Get Started" items={pricingItems} price="£39 / Month" title="Business" type="business" />
-          </Col>
-          <Col sm={4}>
-            <PriceCard buttonLabel="Get Started" items={pricingItems} price="£99 / Month" title="Enterprise" type="enterprise" />
-          </Col>
-        </Row>
-      </Container>
-    </Section>
-    <Section theme="white">
-      <Container>
-        <ContentWithImage image={imageFile5}>
-          <Title>Build Beautiful Interface Into Your Application</Title>
-          <Text size="h4">Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
-          <List>
-            <li>Unlimited Video Call</li>
-            <li>Add Favourite contact</li>
-            <li>Camera Filter</li>
-          </List>
-        </ContentWithImage>
-      </Container>
-    </Section>
-    <Section theme="secondary">
-      <Container>
-        <Row>
-          <Col offset={{md: 3}} md={6} sm={6} xs={6}>
-            <Title color="white">Get your free quote today!</Title>
-            <form>
-              <InputGroup>
-                <Label htmlFor="first-name" color="white">First name:</Label>
-                <Input id="first-name" />
-              </InputGroup>
-              <InputGroup>
-                <Label htmlFor="last-name" color="white">Last name:</Label>
-                <Input id="last-name" />
-              </InputGroup>
-              <InputGroup>
-                <Button>Submit</Button>
-              </InputGroup>
-            </form>
-          </Col>
-        </Row>
-      </Container>
-    </Section>
-    <Section theme="white">
+      </Margin>
+      <Row>
+        <Col sm={4}>
+          <IconCard
+            description="All components are SEO friendly so Google can find your content easily"
+            icon={faSearch}
+            title="SEO Friendly"
+          />
+        </Col>
+        <Col sm={4}>
+          <IconCard
+            description="A variety of different pages have already been pre-build to extend upon"
+            icon={faGrinStars}
+            title="10 Pages"
+          />
+        </Col>
+        <Col sm={4}>
+          <IconCard
+            description="Packaged with Font Awesome for all of your iconography requirements"
+            icon={faFontAwesomeFlag}
+            title="Font Awesome"
+          />
+        </Col>
+      </Row>
+    </Container>
+  </Section>
+);
+
+const Information = () => (
+  <Section theme="transparent">
+    <Container>
+      <ContentWithImage image={imageFile1} imagePosition="right">
+        <Title>Get Started With Our Software</Title>
+        <Text>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
+        <List>
+          <li>Unlimited Video Call</li>
+          <li>Add Favourite contact</li>
+          <li>Camera Filter</li>
+        </List>
+        <Button>Read More</Button>
+      </ContentWithImage>
+      <ContentWithImage image={imageFile2}>
+        <Title>Engineered And Optimization</Title>
+        <Text>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
+        <List>
+          <li>Unlimited Video Call</li>
+          <li>Add Favourite contact</li>
+          <li>Camera Filter</li>
+        </List>
+        <Button>Read More</Button>
+      </ContentWithImage>
+      <ContentWithImage image={imageFile3} imagePosition="right">
+        <Title>Quick & Easy Process</Title>
+        <Text>Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
+        <List>
+          <li>Unlimited Video Call</li>
+          <li>Add Favourite contact</li>
+          <li>Camera Filter</li>
+        </List>
+        <Button>Read More</Button>
+      </ContentWithImage>
+    </Container>
+  </Section>
+);
+
+const OurTeam = () => (
+  <Section theme="primary">
+    <Container>
+      <Title align="center">Our Team</Title>
+      <Text align="center" size="h4">Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
+      <Row>
+        <Col sm={3}>
+          <ProfileCard description="CEO" image={personImage1} title="Park Tim" />
+        </Col>
+        <Col sm={3}>
+          <ProfileCard description="Manager" image={personImage2} title="Douglas Costa" />
+        </Col>
+        <Col sm={3}>
+          <ProfileCard description="SEO Expert" image={personImage3} title="John Doe" />
+        </Col>
+        <Col sm={3}>
+          <ProfileCard description="Frontend Developer" image={personImage4} title="Steven Smith" />
+        </Col>
+      </Row>
+    </Container>
+  </Section>
+);
+
+const Pricing = () => (
+  <Section theme="transparent">
+    <Container>
+      <Title align="center">Easy Pricing Plans</Title>
+      <Text align="center" size="h4">Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
+      <Row>
+        <Col sm={4}>
+          <PriceCard buttonLabel="Get Started" items={pricingItems} price="£15 / Month" title="Personal" type="personal" />
+        </Col>
+        <Col sm={4}>
+          <PriceCard buttonLabel="Get Started" items={pricingItems} price="£39 / Month" title="Business" type="business" />
+        </Col>
+        <Col sm={4}>
+          <PriceCard buttonLabel="Get Started" items={pricingItems} price="£99 / Month" title="Enterprise" type="enterprise" />
+        </Col>
+      </Row>
+    </Container>
+  </Section>
+);
+
+const MoreInformation = () => (
+  <Section theme="white">
+    <Container>
+      <ContentWithImage image={imageFile5}>
+        <Title>Build Beautiful Interface Into Your Application</Title>
+        <Text size="h4">Plan ahead by day, week, or month, and see project status at a glance. Search and filter to focus in on anything form a single project to an individual person's workload.</Text>
+        <List>
+          <li>Unlimited Video Call</li>
+          <li>Add Favourite contact</li>
+          <li>Camera Filter</li>
+        </List>
+      </ContentWithImage>
+    </Container>
+  </Section>
+);
+
+const Quote = () => (
+  <Section theme="secondary">
+    <Container>
+      <Row>
+        <Col offset={{md: 3}} md={6} sm={6} xs={6}>
+          <Title color="white">Get your free quote today!</Title>
+          <form>
+            <InputGroup>
+              <Label htmlFor="first-name" color="white">First name:</Label>
+              <Input id="first-name" />
+            </InputGroup>
+            <InputGroup>
+              <Label htmlFor="last-name" color="white">Last name:</Label>
+              <Input id="last-name" />
+            </InputGroup>
+            <InputGroup>
+              <Button>Submit</Button>
+            </InputGroup>
+          </form>
+        </Col>
+      </Row>
+    </Container>
+  </Section>
+);
+
+const Footer = () => (
+  <Section theme="white">
       <Container>
         <Row>
           <Col md={3} sm={6} xs={6}>
@@ -301,5 +315,19 @@ export const page = () => (
         </Margin>
       </Container>
     </Section>
+);
+
+export const Page1 = () => (
+  <main>
+    <Navigation logo="Fresh Theme" items={navigationItems} />
+    <Hero leftContent={<Image src={imageFile4} />} rightContent={<HeroContent />} />
+    <Services />
+    <Promotion label="Download and try out the Fresh Theme today!" button={<Button icon={faDownload}>Download</Button>} />
+    <Information />
+    <OurTeam />
+    <Pricing />
+    <MoreInformation />
+    <Quote />
+    <Footer />
   </main>
 );
